@@ -1,0 +1,21 @@
+﻿<Window x:Class="Reports.DesktopClient.TasksServices.ChangeTaskAssignedEmployee"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Reports.DesktopClient.TasksServices"
+        mc:Ignorable="d"
+        Title="ChangeTaskAssignedEmployee" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text ="Enter task Id and new assigned employee name: " FontSize="25"/>
+            <TextBox Name="TextBoxId" materialDesign:HintAssist.Hint="Enter ID" FontSize="25" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBox Name="TextBoxEmployeeName" materialDesign:HintAssist.Hint="Enter employee name" FontSize="25" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBlock Name="H1Changed" Text="" FontSize="25"/>
+            <TextBlock Name="ChangedTask" Text="" FontSize="25"/>
+            <Button Padding="5" Margin="5" Click="Update">Update</Button>
+            <Button Padding="5" Margin="5" Click="Go_back">Go back</Button>
+        </StackPanel>
+    </Grid>
+</Window>

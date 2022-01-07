@@ -1,0 +1,21 @@
+﻿<Window x:Class="Reports.DesktopClient.EmployeeServices.FindEmployee"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Reports.DesktopClient.EmployeeServices"
+        mc:Ignorable="d"
+        Title="FindEmployee" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text ="Enter employee's Id or Name: " FontSize="25"/>
+            <TextBox Name="TextBoxId" materialDesign:HintAssist.Hint="Enter ID" FontSize="25" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBox Name="TextBoxName" materialDesign:HintAssist.Hint="Enter Name" FontSize="25" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBlock Name="H1Found" Text="" FontSize="25"/>
+            <TextBlock Name="FoundEmployee" Text="" FontSize="25"/>
+            <Button Padding="5" Margin="5" Click="Find">Find</Button>
+            <Button Padding="5" Margin="5" Click="Go_back">Go back</Button>
+        </StackPanel>
+    </Grid>
+</Window>

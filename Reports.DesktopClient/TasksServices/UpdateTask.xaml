@@ -1,0 +1,20 @@
+﻿<Window x:Class="Reports.DesktopClient.TasksServices.UpdateTask"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Reports.DesktopClient.TasksServices"
+        mc:Ignorable="d"
+        Title="UpdateTask" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text ="Choose an option: " FontSize="25"/>
+            <Button Padding="5" Margin="5" Click="ChangeState">1. Change task state</Button>
+            <Button Padding="5" Margin="5" Click="AddComment">2. Add comment to task</Button>
+            <Button Padding="5" Margin="5" Click="ChangeAssignedEmployee">3. Change task assigned employee</Button>
+            <Button Padding="5" Margin="5" Click="ChangeDescription">4. Change task description</Button>
+            <Button Padding="5" Margin="5" Click="Go_back">5. Go back</Button>
+        </StackPanel>
+    </Grid>
+</Window>

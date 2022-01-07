@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="..\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" />
+    <None Remove="Test\Restored\**" />
+    <None Remove="Test\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Backups\Backups.csproj" />
+    <ProjectReference Include="..\Banks\Banks.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Test\Restored\**" />
+    <Compile Remove="Test\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Test\Restored\**" />
+    <EmbeddedResource Remove="Test\**" />
+  </ItemGroup>
+
+</Project>

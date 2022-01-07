@@ -1,0 +1,35 @@
+﻿<Window x:Class="Reports.DesktopClient.TasksServices.FindTask"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Reports.DesktopClient.TasksServices"
+        mc:Ignorable="d"
+        Title="FindTask" Height="750" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text ="Fill one of the fields: " FontSize="25"/>
+            <TextBox Name="TextBoxId" materialDesign:HintAssist.Hint="Enter task ID" FontSize="25" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBox Name="TextBoxCreationTime" materialDesign:HintAssist.Hint="Enter creation time" FontSize="25" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBox Name="TextBoxAssignedEmployee" materialDesign:HintAssist.Hint="Enter assigned employee's name" FontSize="25" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBox Name="TextBoxChangedByEmployee" materialDesign:HintAssist.Hint="Enter changed employee's name" FontSize="25" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBox Name="TextBoxSubordinatesAssigned" materialDesign:HintAssist.Hint="Enter chief's name" FontSize="25" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBlock Name="H1Found" Text="" FontSize="25"/>
+            <ListView Name="TasksList" Margin="20">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <WrapPanel>
+                            <TextBlock Text=" NAME: " FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Name}"/>
+                            <TextBlock Text=" ID: " FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Guid}"/>
+                        </WrapPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>    
+            </ListView>
+            <Button Padding="5" Margin="5" Click="Find">Find</Button>
+            <Button Padding="5" Margin="5" Click="Go_back">Go back</Button>
+        </StackPanel>
+    </Grid>
+</Window>

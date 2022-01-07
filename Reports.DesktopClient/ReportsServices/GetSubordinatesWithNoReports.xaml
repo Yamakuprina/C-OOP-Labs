@@ -1,0 +1,31 @@
+﻿<Window x:Class="Reports.DesktopClient.ReportsServices.GetSubordinatesWithNoReports"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Reports.DesktopClient.ReportsServices"
+        mc:Ignorable="d"
+        Title="GetSubordinatesWithNoReports" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text ="Enter chief name: " FontSize="25"/>
+            <TextBox Name="TextBoxName" materialDesign:HintAssist.Hint="Enter chief name" FontSize="25" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+            <TextBlock Name="H1Found" Text="" FontSize="25"/>
+            <ListView Name="EmployeesList" Margin="20">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <WrapPanel>
+                            <TextBlock Text=" NAME: " FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Name}"/>
+                            <TextBlock Text=" ID: " FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Guid}"/>
+                        </WrapPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>    
+            </ListView>
+            <Button Padding="5" Margin="5" Click="Get">Get</Button>
+            <Button Padding="5" Margin="5" Click="Go_back">Go back</Button>
+        </StackPanel>
+    </Grid>
+</Window>

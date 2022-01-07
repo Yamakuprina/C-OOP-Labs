@@ -1,0 +1,19 @@
+﻿<Window x:Class="Reports.DesktopClient.Tabs"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Reports.DesktopClient"
+        mc:Ignorable="d"
+        Title="Tabs" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Name="Greeting" Text ="" FontSize="30" FontWeight="Bold"/>
+            <TextBlock Text ="Choose a tab: " FontSize="25"/>
+            <Button Padding="5" Margin="5" Click="Employees_OnClick">1.Employees</Button>
+            <Button Padding="5" Margin="5" Click="Tasks_OnClick">2.Tasks</Button>
+            <Button Padding="5" Margin="5" Click="Reports_OnClick">3.Reports</Button>
+        </StackPanel>
+    </Grid>
+</Window>
